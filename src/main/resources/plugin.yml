@@ -1,0 +1,13 @@
+name: CoreSTF
+version: '${project.version}'
+main: live.imcoding.supertabulator.Main
+api-version: 1.19
+authors: [ AeroSama, _aero98 ]
+description: Plugin Minecraft CoreSTF para un server privado.
+website: imconding.live
+
+commands:
+  timer:
+    permission: stf.command.timer
+  mochila:
+    aliases: [ bp ]
