@@ -11,3 +11,4 @@ commands:
     permission: stf.command.timer
   mochila:
     aliases: [ bp ]
+    permission: stf.command.mochila

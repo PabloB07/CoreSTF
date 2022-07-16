@@ -2,6 +2,7 @@ package live.imcoding.supertabulator.commands;
 
 import live.imcoding.supertabulator.Main;
 import live.imcoding.supertabulator.backpack.Backpack;
+import live.imcoding.supertabulator.utils.HexColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -20,7 +21,11 @@ public class BackpackCommand implements CommandExecutor {
 
         Backpack backpack = Main.getInstance().getBackpackManager().getBackpack(player.getUniqueId());
 
-        player.openInventory(backpack.getInventory());
+        if (player.hasPermission("stf.command.mochila")){
+            player.openInventory(backpack.getInventory());
+        }else{
+            player.sendMessage(HexColor.format("#8a0b1a No tienes permisos!"));
+        }
         return true;
     }
 
