@@ -11,7 +11,7 @@ public class Config {
     private final YamlConfiguration config;
 
     public Config() {
-        File dir = new File("./plugins/SuperTabulator");
+        File dir = new File("./plugins/STF");
 
         if (!dir.exists()) {
             dir.mkdirs();
